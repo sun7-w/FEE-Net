@@ -1,31 +1,3 @@
-import torch
-from torch import nn
-import torch
-import torchvision
-from torch import nn
-from torch.autograd import Variable
-from torch.utils.data import DataLoader
-from torchvision import transforms
-from torchvision.utils import save_image
-import torch.nn.functional as F
-import os
-import matplotlib.pyplot as plt
-from utils import *
-__all__ = ['EFESNet']
-
-import timm
-from timm.models.layers import DropPath, to_2tuple, trunc_normal_
-import types
-import math
-from abc import ABCMeta, abstractmethod
-from mmcv.cnn import ConvModule
-import pdb
-from modules.deablock import *
-from modules.cga import *
-from modules.attention import *
-from modules.attention import BiLevelRoutingAttention_nchw
-
-
 
 class PFC(nn.Module):
     def __init__(self, in_channels=3, out_channels=3, kernel_size=7):
